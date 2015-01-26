@@ -31,8 +31,7 @@ function parseArgs(){
             //console.log(i + ': ' + arg);
 
             var currentArg = arg.toLowerCase();
-            // podria cambiarse por una regex "empieza por -"
-            if(currentArg.substr(0,1) == "-"){
+            if(/^\-/.test(currentArg)){
                 currentOption = currentArg;
                 if(currentOption === "-debug"){
                     scriptOpts[currentOption] = 'debug';
@@ -252,9 +251,9 @@ RenderUrlsToFile = function(urls, scriptOpts, callbackPerUrl, callbackFinal) {
                             var comment = document.createComment(" STATIC PAGE CREATED WITH PHANTOMJS-AJAX-SNAPSHOT AT: "+new Date()+" ");
                             document.body.insertBefore(comment, document.body.firstChild);
                             
-                            filtersById = [].concat( filtersById );
-                            for(var j=0; j<filtersById.length; j++){
-                                var aFilter = filtersById[j];
+                            var afiltersById = [].concat( filtersById );
+                            for(var j=0; j<afiltersById.length; j++){
+                                var aFilter = afiltersById[j];
                                 // remove() no funciona
                                 var elem = document.getElementById(aFilter);
                                 if(elem != undefined){
@@ -262,16 +261,16 @@ RenderUrlsToFile = function(urls, scriptOpts, callbackPerUrl, callbackFinal) {
                                 }
                             }
 
-                            filtersByClass = [].concat( filtersByClass );
-                            for(var k=0; k<filtersByClass.length; k++){
-                                var aClassFilter = filtersByClass[k];
+                            var afiltersByClass = [].concat( filtersByClass );
+                            for(var k=0; k<afiltersByClass.length; k++){
+                                var aClassFilter = afiltersByClass[k];
                                 //console.log("Filtro clase por: ",aClassFilter);                                
                                 replaceContentInContainer(aClassFilter, '');
                             }
 
-                            filtersByMetaTag = [].concat( filtersByMetaTag );
-                            for(var l=0; l<filtersByMetaTag.length; l++){
-                                var aMetaFilter = filtersByMetaTag[l];
+                            var afiltersByMetaTag = [].concat( filtersByMetaTag );
+                            for(var l=0; l<afiltersByMetaTag.length; l++){
+                                var aMetaFilter = afiltersByMetaTag[l];
                                 removeMetaTags(aMetaFilter);
                             }
                             
