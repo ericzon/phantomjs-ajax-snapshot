@@ -31,12 +31,17 @@ Simple script that generates static pages from ajax / non-ajax source pages. All
 
 ## Examples
 
-Snapshot from url:
+**Snapshot from url:**
 
 phantomjs phantomjsAjaxSnapshot.js  --ssl-protocol=any --disk-cache=no -sourceurl www.my-cool-ajax-web.com -outputdir snapshots\
 
 
-Snapshots from json array of urls:
+**Snapshot from url stripping DOM elements with classes a,b,c:**
+
+phantomjs phantomjsAjaxSnapshot.js  --ssl-protocol=any --disk-cache=no -sourceurl www.my-cool-ajax-web.com -outputdir snapshots\
+
+
+**Snapshots from json array of urls:**
 
 phantomjs phantomjsAjaxSnapshot.js  --ssl-protocol=any --disk-cache=no -sourceFile myUrls2visit.json -basepath www.my-cool-ajax-web.com/common/path -outputdir snapshots\
 
