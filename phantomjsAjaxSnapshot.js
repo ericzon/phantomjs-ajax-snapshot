@@ -319,8 +319,8 @@ scriptOpts['-useragent'] = scriptOpts['-useragent'] || 'Mozilla/5.0 (X11; Linux 
 scriptOpts['-basepath'] = scriptOpts['-basepath'] || 'www.url-with-ajax.com/common-base/path/';
 scriptOpts['-outputdir'] = scriptOpts['-outputdir'] || 'snapshots/';
 scriptOpts['-t'] = (scriptOpts['-t'] && !isNaN(scriptOpts['-t'])) ? parseInt(scriptOpts['-t']) : 3000;
-scriptOpts['-idlist'] = scriptOpts['-idlist'] || ['not-allowed', 'login-holder'];
-scriptOpts['-classlist'] = scriptOpts['-classlist'] || ['price'];
+scriptOpts['-idlist'] = scriptOpts['-idlist'] || [];
+scriptOpts['-classlist'] = scriptOpts['-classlist'] || [];
 scriptOpts['-metalist'] = scriptOpts['-metalist'] || [];
 
 console.log("OPTIONS"+((Object.keys(scriptOpts).length === 0) ? ' BY DEFAULT' : '')+":\n"+
