@@ -38,7 +38,7 @@ phantomjs phantomjsAjaxSnapshot.js  --ssl-protocol=any --disk-cache=no -sourceur
 
 **Snapshot from url stripping DOM elements with classes a,b,c:**
 
-phantomjs phantomjsAjaxSnapshot.js  --ssl-protocol=any --disk-cache=no -sourceurl www.my-cool-ajax-web.com -outputdir snapshots\
+phantomjs phantomjsAjaxSnapshot.js  --ssl-protocol=any --disk-cache=no -sourceurl www.my-cool-ajax-web.com -outputdir snapshots\ -classlist a,b,c
 
 
 **Snapshots from json array of urls:**
