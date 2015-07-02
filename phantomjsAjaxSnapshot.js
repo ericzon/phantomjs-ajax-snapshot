@@ -19,7 +19,7 @@ function trim(str) {
 function parseArgs(){
     var args = system.args;
     var scriptOpts = [];
-    console.log("Remember to put parameters JUST AFTER the command: 'phantomjs --ssl-protocol=any --disk-cache=no ... '\n");
+    console.log("Remember to put parameters JUST AFTER the command: 'phantomjs --ssl-protocol=any --web-security=false --disk-cache=no ... '\n");
     scriptOpts['-debug'] = '';
     //console.log("ARGS: ", args);
     if (args.length > 1) {
