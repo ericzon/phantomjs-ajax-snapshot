@@ -29,6 +29,8 @@ Simple script that generates static pages from ajax / non-ajax source pages. All
 
     -debug    (boolean) Enables debug messages (false by default).
 
+    -outputFormat: (string) png gif jpeg pdf (html by default).
+
 ## Examples
 
 **Snapshot from url:**
@@ -69,7 +71,8 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Changelog
 
-* 0.0.1 Initial commit
+* 0.0.2 Added format parameter.
+  0.0.1 Initial commit
 
 ## Roadmap
 
